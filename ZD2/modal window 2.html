@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Модальное окно 2</title>
+    <link rel="stylesheet" href="style 2.css">
+</head>
+
+<body>
+    <a href="#openModal">Открыть модальное окно</a>
+
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Закрыть" class="close">X</a>
+            <h3>Log In</h3>
+            <p>this is dumb modal window, click x to close it</p>
+            <form>
+                <p>
+                    <input type="text" name="username" placeholder=" user name or email">
+                </p>
+
+                <p>
+                    <input type="password" name="password" placeholder=" password">
+                </p>
+                <input type="submit" value="log in" class="logIn">
+                <input type="reset" value="cancel" class="cancel">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

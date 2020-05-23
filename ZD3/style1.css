@@ -1,0 +1,31 @@
+input {
+    border-radius: 7px;
+    width: 200px;
+    height: 50px;
+    padding: 0px;
+    background-color: black;
+    border-color: gray;
+    font-size: 20px;
+    border-style: solid;
+    color: gray;
+    padding: 10px;
+    margin: 20px;
+}
+
+body {
+    background-color: black;
+}
+
+input:focus {
+    transition-duration: 1s;
+    border-color: dodgerblue;
+    border-width: 3px;
+    /* outline: none; */
+}
+
+input:focus::placeholder {
+    transform: translateY(-39px);
+    color: dodgerblue;
+    transition-duration: 1s;
+    font-size: 18px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /**ПАМЯТКА
+*Функция isFinite(n) преобразует аргумент к числу и возвращает true, 
+*если это не Infinity/-Infinity/NaN.
+*Таким образом, правая часть отсеет заведомо не-числа, но оставит такие значения *как true/false/null и пустую строку '', так как они корректно преобразуются в *числа.
+*Для их проверки нужна левая часть. Вызов parseFloat(true/false/null/'') вернёт *NaN для этих значений.
+*Так устроена функция parseFloat: она преобразует аргумент к строке, то есть *true/false/null становятся "true"/"false"/"null", а затем считывает из неё *число, при этом пустая строка даёт NaN.
+*В результате отсеивается всё, кроме строк-чисел и обычных чисел.
+*/
+  function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
+  while (true) {
+    var years = prompt('Введите число более ста', '');
+
+    //Если вернулся null то пользователь нажал отмену
+    if (years === null) {
+      alert('Спасибо!');
+      break;
+    }
+    //Проверяем являються ли введенные данные числом  
+    if (isNumeric(years)) {
+      if (years > 100) {
+        alert('Ваше число: ' + years)
+        break;
+      } else { alert('Ваше число: ' + years + ' не больше 100, попробуйте еще! ') }
+    } else {
+      alert('Введенный символ: ' + years + ' не является числом или содержит  пробелы! ')
+    }
+  }
+</script>
+
+</html>
